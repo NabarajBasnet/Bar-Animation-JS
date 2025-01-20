@@ -47,7 +47,6 @@ This project demonstrates a simple bar animation where bars increase in height o
 ## Contribution
 Feel free to fork the repository and submit pull requests for improvements or new features.
 
-## Live link:
-https://nabarajbasnet.github.io/Bar-Animation-JS/
+## Live link: https://nabarajbasnet.github.io/Bar-Animation-JS/
 
 Happy coding and enjoy mastering JavaScript fundamentals! 🎉
