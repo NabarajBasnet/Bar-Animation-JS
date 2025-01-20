@@ -7,9 +7,8 @@ canvas.height = window.screen.availHeight / 1.6;
 canvas.style.backgroundColor = 'gray';
 
 const bars = Array.from({ length: 20 }, () => {
-    return new Bars();
+    return new Bars(10,10,10,10);
 })
-
 
 const gameLoop = () => {
     bars.forEach((bar) => bar.update(ctx));
