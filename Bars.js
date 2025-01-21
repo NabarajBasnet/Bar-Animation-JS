@@ -10,16 +10,22 @@ class Bars {
             w: w || 10,
             h: h || 10,
         };
-
     };
+
 
     draw(ctx) {
         ctx.beginPath();
-        ctx.rect(this.position.x, window.screen.availHeight / 1.6 - this.size.w, this.size.w, this.size.h);
+        ctx.rect(this.position.x, document.documentElement.clientHeight, this.size.w, this.size.h);
+        ctx.fillStyle = 'gray';
         ctx.fill();
+        ctx.strokeStyle = 'black';
+        ctx.lineWidth = 1;
+        ctx.stroke();
     };
 
-    move(ctx) { };
+    move(ctx) {
+
+    };
 
     update(ctx) {
         this.draw(ctx);
