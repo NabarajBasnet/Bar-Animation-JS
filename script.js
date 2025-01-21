@@ -3,16 +3,21 @@ const ctx = canvas.getContext('2d');
 import Bars from "./Bars.js";
 
 let availableScreenWidth = document.documentElement.clientWidth;
-
 let totalBars = 20;
 let barWidth = availableScreenWidth / totalBars;
 let barHeight = 100;
 
-let x = 0;
-let y = 0;
+let barPosition = {
+    x: () => {
+        return barWidth
+    },
+    y: 0
+};
+
+console.log(barPosition.x());
 
 const bars = Array.from({ length: totalBars }, () => {
-    return new Bars(x, y, barWidth, barHeight);
+    return new Bars(barPosition.x, barPosition.y, barWidth, barHeight);
 });
 
 const gameLoop = () => {
@@ -22,9 +27,7 @@ const gameLoop = () => {
 
     bars.forEach((bar) => bar.update(ctx));
 
-    console.log(barWidth);
-
-    availableScreenWidth = document.documentElement.clientWidth
+    availableScreenWidth = document.documentElement.clientWidth;
     barWidth = availableScreenWidth / bars.length;
 
     requestAnimationFrame(gameLoop);
