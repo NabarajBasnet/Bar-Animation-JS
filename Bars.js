@@ -14,13 +14,13 @@ class Bars {
 
 
     draw(ctx) {
-        ctx.beginPath();
-        ctx.rect(this.position.x, document.documentElement.clientHeight, this.size.w, this.size.h);
-        ctx.fillStyle = 'gray';
-        ctx.fill();
-        ctx.strokeStyle = 'black';
-        ctx.lineWidth = 1;
-        ctx.stroke();
+        // ctx.beginPath();
+        // ctx.rect(this.position.x, document.documentElement.clientHeight, this.size.w, this.size.h);
+        // ctx.fillStyle = 'gray';
+        // ctx.fill();
+        // ctx.strokeStyle = 'black';
+        // ctx.lineWidth = 1;
+        // ctx.stroke();
     };
 
     move(ctx) {
