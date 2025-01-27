@@ -12,11 +12,11 @@ class Bars {
             h: h || 0,
         };
 
-        this.canvas = canvas
+        this.canvas = canvas;
+        this.speed = 100;
     };
 
     draw(ctx) {
-
         ctx.beginPath();
         ctx.rect(this.position.x, this.position.y, this.size.w, this.size.h);
         ctx.stroke();
@@ -27,8 +27,11 @@ class Bars {
     };
 
     move(ctx) {
-        this.position.y = this.position.y - 1;
+        this.position.y = this.position.y - Math.random();
         this.size.h = this.size.h + 1;
+
+        if (this.size.h >= this.canvas.height) {
+        };
     };
 
     update(ctx) {
