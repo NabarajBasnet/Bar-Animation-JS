@@ -1,27 +1,34 @@
+const directions = [-1, 1];
 
 class Bars {
-    constructor(x, y, w, h) {
+    constructor(x, y, w, h, canvas) {
         this.position = {
             x: x || 0,
-            y: y || 0
+            y: y || 0,
         };
 
         this.size = {
             w: w || 10,
-            h: h || 10,
+            h: h || 0,
         };
+
+        this.canvas = canvas
     };
 
-
     draw(ctx) {
+
         ctx.beginPath();
         ctx.rect(this.position.x, this.position.y, this.size.w, this.size.h);
-        ctx.fillStyle = 'gray'
+        ctx.stroke();
+        ctx.lineWidth = 4;
+        ctx.strokeStyle = 'black';
+        ctx.fillStyle = 'gray';
         ctx.fill();
     };
 
     move(ctx) {
-
+        this.position.y = this.position.y - 1;
+        this.size.h = this.size.h + 1;
     };
 
     update(ctx) {
